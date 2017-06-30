@@ -12,6 +12,95 @@
 
 
     <Button
+        android:id="@+id/button4"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="@dimen/keyboard_key_margin"
+        android:padding="20dp"
+        android:text="1"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="@+id/button2"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="@dimen/keyboard_key_margin"
+        android:padding="20dp"
+        android:text="2"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintLeft_toLeftOf="@+id/button5"
+        app:layout_constraintRight_toRightOf="@+id/button5"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="@dimen/keyboard_key_margin"
+        android:padding="20dp"
+        android:text="3"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintLeft_toLeftOf="@+id/button6"
+        app:layout_constraintRight_toRightOf="@+id/button6"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="@dimen/keyboard_key_margin"
+        android:layout_marginRight="@dimen/keyboard_key_margin"
+        android:layout_marginTop="@dimen/keyboard_key_margin"
+        android:padding="20dp"
+        android:text="4"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintRight_toLeftOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:padding="20dp"
+        android:text="5"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
         android:id="@+id/button6"
         android:layout_width="79dp"
         android:layout_height="87dp"
@@ -30,6 +119,22 @@
         tools:layout_conversion_absoluteY="193dp" />
 
     <Button
+        android:id="@+id/button9"
+        android:layout_width="79dp"
+        android:layout_height="87dp"
+        android:layout_marginRight="@dimen/keyboard_key_margin"
+        android:layout_marginTop="@dimen/keyboard_key_margin"
+        android:padding="20dp"
+        android:text="7"
+        android:textSize="40dp"
+        app:layout_constraintRight_toLeftOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:layout_conversion_absoluteHeight="64dp"
+        tools:layout_conversion_absoluteWidth="117dp"
+        tools:layout_conversion_absoluteX="237dp"
+        tools:layout_conversion_absoluteY="193dp" />
+
+    <Button
         android:id="@+id/button8"
         android:layout_width="79dp"
         android:layout_height="87dp"
@@ -42,22 +147,6 @@
         app:layout_constraintLeft_toLeftOf="@+id/button5"
         app:layout_constraintRight_toRightOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginRight="@dimen/keyboard_key_margin"
-        android:layout_marginTop="@dimen/keyboard_key_margin"
-        android:padding="20dp"
-        android:text="7"
-        android:textSize="40dp"
-        app:layout_constraintRight_toLeftOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:layout_conversion_absoluteHeight="64dp"
         tools:layout_conversion_absoluteWidth="117dp"
         tools:layout_conversion_absoluteX="237dp"
@@ -129,22 +218,6 @@
         tools:layout_conversion_absoluteX="237dp"
         tools:layout_conversion_absoluteY="193dp" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="@dimen/keyboard_key_margin"
-        android:padding="20dp"
-        android:text="3"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintLeft_toLeftOf="@+id/button6"
-        app:layout_constraintRight_toRightOf="@+id/button6"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
     <TextView
         android:id="@+id/textZuButton"
         android:layout_width="375dp"
@@ -158,97 +231,6 @@
         android:textSize="50dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="@dimen/keyboard_key_margin"
-        android:padding="20dp"
-        android:text="2"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintLeft_toLeftOf="@+id/button5"
-        app:layout_constraintRight_toRightOf="@+id/button5"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="0dp"
-        android:padding="20dp"
-        android:text="5"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="@dimen/keyboard_key_margin"
-        android:layout_marginRight="@dimen/keyboard_key_margin"
-        android:layout_marginTop="@dimen/keyboard_key_margin"
-        android:padding="20dp"
-        android:text="4"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintRight_toLeftOf="@+id/button5"
-        app:layout_constraintTop_toTopOf="@+id/button5"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="79dp"
-        android:layout_height="87dp"
-        android:layout_marginBottom="@dimen/keyboard_key_margin"
-        android:padding="20dp"
-        android:text="1"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintLeft_toLeftOf="@+id/button2"
-        app:layout_constraintRight_toRightOf="@+id/button2"
-        tools:layout_conversion_absoluteHeight="64dp"
-        tools:layout_conversion_absoluteWidth="117dp"
-        tools:layout_conversion_absoluteX="237dp"
-        tools:layout_conversion_absoluteY="193dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="-82dp"
-        tools:layout_editor_absoluteX="-959dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="-60dp"
-        tools:layout_editor_absoluteX="-959dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -266,9 +248,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"
-        tools:layout_editor_absoluteX="481dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </android.support.constraint.ConstraintLayout>
