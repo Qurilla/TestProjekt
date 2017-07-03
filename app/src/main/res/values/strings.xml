@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TestProjekt</string>
+    <string name="textZuButton">Welcome back!</string>
+    <string name="textView">Please enter your mobile number.</string>
+    <string name="startButton">Start here >></string>
 </resources>
