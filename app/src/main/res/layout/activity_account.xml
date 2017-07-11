@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nextbike.testprojekt.AccountActivity">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline6"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="481dp" />
+
+    <TextView
+        android:id="@+id/myAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/myAccount"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#CC0000AA"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline6"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/youRent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/youRent"
+        android:textSize="30dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/myAccount"
+        app:layout_constraintRight_toLeftOf="@+id/guideline6"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/rentedBikeNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="424242"
+        android:textSize="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/youRent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline7"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="logOut"
+        android:text="@string/logout"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/giveBack1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/giveBack"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@+id/guideline6"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toTopOf="@+id/rentedBikeNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/rentedBikeNumber"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline7"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="240dp" />
+
+    <Button
+        android:id="@+id/rentNew"
+        android:layout_width="195dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="rentNew"
+        android:text="@string/rentNew"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline6"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        tools:layout_editor_absoluteY="416dp"
+        tools:layout_editor_absoluteX="627dp" />
+
+    <Button
+        android:id="@+id/showMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonToMap"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintRight_toLeftOf="@+id/logOutButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/moreInfoButton"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.68" />
+
+    <Button
+        android:id="@+id/moreInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonToMoreInfo"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline6" />
+
+</android.support.constraint.ConstraintLayout>

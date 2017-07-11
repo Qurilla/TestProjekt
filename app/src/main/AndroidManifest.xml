@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BikeCountActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".PinActivity" />
+        <activity android:name=".MoreInfoActivity" />
+        <activity android:name=".YourBikesActivity" />
+        <activity android:name=".AccountActivity"></activity>
     </application>
 
 </manifest>

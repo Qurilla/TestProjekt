@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TestProjekt</string>
+    <string name="textZuButton">Willkommen zurück!</string>
+    <string name="textView">Bitte geben Sie ihre Telefonnummer ein.</string>
+    <string name="button14">zurück</string>
+    <string name="buttonToRent">Rad ausleihen</string>
+    <string name="buttonToMap">Karte</string>
+    <string name="buttonToRegister">Registrieren</string>
+    <string name="buttonToMoreInfo">Info</string>
+    <string name="yourNumber">Ihre Nummer:</string>
+    <string name="bikes">Fahrräder:</string>
+    <string name="cancel">ABBRUCH</string>
+    <string name="enterYourPin">Bitte geben Sie ihre PIN ein.</string>
+    <string name="howManyBikes">Wieviele Fahrräder möchten Sie ausleihen?</string>
+    <string name="success">Erfolg!</string>
+    <string name="yourBikesAre">Ihre Fahrräder sind:</string>
+    <string name="myAccount">Mein Konto</string>
+    <string name="youRent">Sie haben momentan folgende Räder ausgeliehen:</string>
+    <string name="logout">ABMELDEN</string>
+    <string name="rentNew">AUSLEIHEN</string>
+    <string name="giveBack">ZURÜCKGEBEN</string>
+</resources>

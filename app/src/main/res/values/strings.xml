@@ -2,5 +2,21 @@
     <string name="app_name">TestProjekt</string>
     <string name="textZuButton">Welcome back!</string>
     <string name="textView">Please enter your mobile number.</string>
-    <string name="startButton">Start here >></string>
+    <string name="button14">back</string>
+    <string name="buttonToRent">Rent a bike</string>
+    <string name="buttonToMap">Map</string>
+    <string name="buttonToRegister">Register here</string>
+    <string name="buttonToMoreInfo">Info</string>
+    <string name="yourNumber">Your number:</string>
+    <string name="bikes">Bikes:</string>
+    <string name="cancel">CANCEL</string>
+    <string name="enterYourPin">Please enter your PIN number.</string>
+    <string name="howManyBikes">How many bikes would you like to rent today?</string>
+    <string name="success">Success!</string>
+    <string name="yourBikesAre">Your bikes are:</string>
+    <string name="myAccount">My Account</string>
+    <string name="youRent">You are currently renting these bikes:</string>
+    <string name="logout">LOG OUT</string>
+    <string name="rentNew">RENT NEW</string>
+    <string name="giveBack">GIVE BACK</string>
 </resources>

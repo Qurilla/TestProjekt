@@ -1,9 +1,7 @@
 package com.example.nextbike.testprojekt;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,12 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class PinActivity extends AppCompatActivity {
 
     Button buttonDelete = null;
     Button buttonGo = null;
@@ -27,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     String numberVar = "";
     //Anzeige der eingegebenen Nummer
     TextView showNumber = null;
+    String pinStars = "";
+
 
 
     View.OnClickListener buttonNumberClickListener = new View.OnClickListener() {
@@ -37,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
             // die Länge der eingegebenen Nummer soll begrent werden (auf 15 Ziffern)
             if (numberVar.length() <= 14) {
                 numberVar += buttonText;
-                showNumber.setText(numberVar);
+                pinStars += "*";
+                showNumber.setText(pinStars);
             }
         }
     };
-
 
 
     @Override
@@ -49,36 +48,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Zum Anpassen der Sprache:
-            String languageToLoad = FirstActivity.selectedLanguage;
+        String languageToLoad = FirstActivity.selectedLanguage;
         Locale locale = new Locale(languageToLoad);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         //config.locale = locale;     DEPRECATED, deswegen stattdessen die Zeile hier drunter
         config.setLocale(locale);
         getBaseContext().getResources().updateConfiguration(config,
-            getBaseContext().getResources().getDisplayMetrics());
+                getBaseContext().getResources().getDisplayMetrics());
         //Context newContext = createConfigurationContext(config);
         //attachBaseContext(newContext);
 
 
+        setContentView(R.layout.activity_pin);
 
 
+        // Annehmen der Telefonnummer aus vorherigem Screen
+        Bundle extras = getIntent().getExtras();
 
-        setContentView(R.layout.activity_main);
+        if (extras != null) {
+            String detailValue = extras.getString("UserNumber");
+            if (detailValue != null) {
+                // Anzeige der Telefonnummer
+                TextView tv = (TextView) findViewById(R.id.textViewYourNumber);
+                tv.setText(detailValue);
+            }
+        }
 
 
         List<Button> buttonList = Arrays.asList(
-            (Button) findViewById(R.id.button4),
-            (Button) findViewById(R.id.button3),
-            (Button) findViewById(R.id.button7),
-            (Button) findViewById(R.id.button2),
-            (Button) findViewById(R.id.button5),
-            (Button) findViewById(R.id.button6),
-            (Button) findViewById(R.id.button9),
-            (Button) findViewById(R.id.button8),
-            (Button) findViewById(R.id.button10),
-            (Button) findViewById(R.id.button12),
-                (Button) findViewById(R.id.button13)
+                (Button) findViewById(R.id.button4),
+                (Button) findViewById(R.id.button3),
+                (Button) findViewById(R.id.button7),
+                (Button) findViewById(R.id.button2),
+                (Button) findViewById(R.id.button5),
+                (Button) findViewById(R.id.button6),
+                (Button) findViewById(R.id.button9),
+                (Button) findViewById(R.id.button8),
+                (Button) findViewById(R.id.button10),
+                (Button) findViewById(R.id.button12)
         );
 
         for (final Button button : buttonList) {
@@ -87,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonDelete = (Button) findViewById(R.id.button11);
-        //buttonGo = (Button) findViewById(R.id.button13);
+        buttonGo = (Button) findViewById(R.id.button13);
         showNumber = (TextView) findViewById(R.id.textView2);
 
 // region buttons SpaghettiCode
@@ -182,8 +190,9 @@ public class MainActivity extends AppCompatActivity {
                 // check, ob ueberhaupt etwas in numberVar steht, wenn ja dann entferne den letzten char
                 if (numberVar.length() > 0) {
                     numberVar = numberVar.substring(0, numberVar.length() - 1);
+                    pinStars = pinStars.substring(0, pinStars.length() - 1);
                 }
-                showNumber.setText(numberVar);
+                showNumber.setText(pinStars);
             }
         });
 
@@ -192,18 +201,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Zurück-zum-ersten-Screen-Button
-    public void startFirstScreen (View view) {
-        Intent intent = new Intent(this, FirstActivity.class);
+
+    public void startMobileActivity (View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         this.overridePendingTransition(0, 0);
     }
 
-    public void startPinScreen (View view) {
-        Intent intent = new Intent(this, PinActivity.class);
-        intent.putExtra("UserNumber", numberVar);
-        startActivity(intent);
-        this.overridePendingTransition(0, 0);
+    public void startAccountScreen (View view) {
+        if (numberVar.equals("4242")) {
+            Intent intent = new Intent(this, AccountActivity.class);
+            startActivity(intent);
+            this.overridePendingTransition(0, 0);
+        } else {
+            numberVar = "";
+            pinStars = "";
+            showNumber.setText(pinStars);
+            Toast.makeText(getApplicationContext(), "WRONG PIN", Toast.LENGTH_LONG).show();
+        }
     }
 
 
