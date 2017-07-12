@@ -10,12 +10,14 @@ import android.view.View;
 
 import java.util.Locale;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends CountDownBase {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TimerRestart();
 
         // Zum Anpassen der Sprache:
         String languageToLoad = FirstActivity.selectedLanguage;
@@ -46,11 +48,6 @@ public class MenuActivity extends AppCompatActivity {
         this.overridePendingTransition(0, 0);
     }
 
-    // für den CountDownTimer
-    public void backToFirstScreen () {
-        Intent intent = new Intent(this, FirstActivity.class);
-        startActivity(intent);
-        this.overridePendingTransition(0, 0);
-    }
+
 
 }

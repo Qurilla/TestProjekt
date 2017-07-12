@@ -7,13 +7,15 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class MoreInfoActivity extends AppCompatActivity {
+public class MoreInfoActivity extends CountDownBase {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_info);
+
+        TimerRestart();
     }
 
 

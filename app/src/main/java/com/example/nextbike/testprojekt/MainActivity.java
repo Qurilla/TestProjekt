@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends CountDownBase {
 
     Button buttonDelete = null;
     Button buttonGo = null;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener buttonNumberClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            TimerRestart();
             Button button = (Button) v;
             String buttonText = String.valueOf(button.getText());
             // die Länge der eingegebenen Nummer soll begrent werden (auf 15 Ziffern)
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 numberVar += buttonText;
                 showNumber.setText(numberVar);
             }
+
         }
     };
 
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TimerRestart();
 
         // Zum Anpassen der Sprache:
             String languageToLoad = FirstActivity.selectedLanguage;
@@ -59,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
             getBaseContext().getResources().getDisplayMetrics());
         //Context newContext = createConfigurationContext(config);
         //attachBaseContext(newContext);
-
-
 
 
 
@@ -179,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TimerRestart();
                 // check, ob ueberhaupt etwas in numberVar steht, wenn ja dann entferne den letzten char
                 if (numberVar.length() > 0) {
                     numberVar = numberVar.substring(0, numberVar.length() - 1);
