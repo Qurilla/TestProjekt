@@ -148,8 +148,8 @@
         android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@+id/guideline6"
         app:layout_constraintTop_toTopOf="parent" />
-    <!--
-        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -161,7 +161,9 @@
             app:layout_constraintTop_toBottomOf="@+id/showMap"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="8dp" />
-   -->
+
+
+    <!--
         <fragment
             android:id="@+id/bikeCount_fragment"
             class="com.example.nextbike.testprojekt.BikeCountFragment"
@@ -177,7 +179,7 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintHorizontal_bias="0.492"
             tools:layout="@layout/fragment_bike_count" />
-
+-->
 
 
 </android.support.constraint.ConstraintLayout>

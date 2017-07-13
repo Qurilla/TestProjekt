@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.nextbike.testprojekt.BikeCountFragment">
+    android:layout_height="match_parent">
+    tools:context="com.example.nextbike.testprojekt.BikeCountFragment"
+
 
     <TextView
         android:id="@+id/bikeCountText"
@@ -47,7 +48,6 @@
         android:textSize="50dp"
         android:textStyle="bold"
         android:textAlignment="center"
-
         app:layout_constraintTop_toTopOf="@+id/bikeCountNumber"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/bikeCountNumber"
