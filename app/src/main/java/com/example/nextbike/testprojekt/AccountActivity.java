@@ -14,19 +14,20 @@ import android.support.v4.app.FragmentManager;
 
 
 
-public class AccountActivity extends CountDownBase {
+public class AccountActivity extends CountDownBase implements BikeCountFragment.OnOkayButtonListener {
 
 
     android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
     android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     BikeCountFragment fragment = new BikeCountFragment();
+    SuccessFragment fragmentSuccess = new SuccessFragment();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        
         fragmentTransaction.add(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
 
@@ -50,6 +51,18 @@ public class AccountActivity extends CountDownBase {
         this.overridePendingTransition(0, 0);
     }
 
+    public void ChangeFragment () {
+
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.fragment_container, fragmentSuccess);
+        fragmentTransaction.commit();
+    }
 
 
+    @Override
+    public void OkayButtonClicked() {
+        ChangeFragment();
+    }
 }

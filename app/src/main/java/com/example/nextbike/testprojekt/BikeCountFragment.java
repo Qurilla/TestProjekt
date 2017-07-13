@@ -1,5 +1,6 @@
 package com.example.nextbike.testprojekt;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,8 +15,31 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import static com.example.nextbike.testprojekt.R.id.button;
+
 
 public class BikeCountFragment extends Fragment {
+
+
+    public interface OnOkayButtonListener {
+        void OkayButtonClicked();
+    }
+
+    OnOkayButtonListener ookbl;
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            ookbl = (OnOkayButtonListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement OnOkayButtonListener");
+        }
+    }
+
+
+
 
 
     public final static int MAX_BIKE_RENT_COUNT = 4;
@@ -26,6 +50,7 @@ public class BikeCountFragment extends Fragment {
 
     public Button bikeCountMore = null;
     public Button bikeCountLess = null;
+    public Button okayButton = null;
 
 
     @Override
@@ -40,6 +65,7 @@ public class BikeCountFragment extends Fragment {
         bikeCountMore = getActivity().findViewById(R.id.bikeCountMore);
         bikeCountLess =  getActivity().findViewById(R.id.bikeCountLess);
         bikeCountNumber = getActivity().findViewById(R.id.bikeCountNumber);
+        okayButton = getActivity().findViewById(R.id.button17);
 
         // um den Minus-Button von Beginn an auszugrauen, da ja nicht weniger als 1 Fahrrad moeglich ist:
         bikeCountLess.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
@@ -81,6 +107,15 @@ public class BikeCountFragment extends Fragment {
                 }
             }
         });
+
+
+        okayButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //hello! anybody home?
+                ookbl.OkayButtonClicked();
+            }
+        });
+
 
     }
 
