@@ -65,4 +65,10 @@ public class AccountActivity extends CountDownBase implements BikeCountFragment.
     public void OkayButtonClicked() {
         ChangeFragment();
     }
+
+    public void RestartTimerForFragment() {
+        TimerRestart();
+    }
+
+
 }

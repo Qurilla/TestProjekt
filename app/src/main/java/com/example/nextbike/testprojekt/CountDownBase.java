@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public abstract class CountDownBase extends AppCompatActivity {
 
-    public final static int COUNT_DOWN_TIME = 10000;
+    public final static int COUNT_DOWN_TIME = 30000;
 
     public static CountDownTimer cTimer;
 
